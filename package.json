@@ -19,6 +19,7 @@
   "homepage": "https://github.com/leah-russo-401-advanced-jacasvript/api-server#readme",
   "dependencies": {
     "dotenv": "^8.2.0",
+    "express": "^4.17.1",
     "json-server": "^0.16.2"
   }
 }
