@@ -1,0 +1,24 @@
+{
+  "name": "api-server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "test",
+    "start": ""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/leah-russo-401-advanced-jacasvript/api-server.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/leah-russo-401-advanced-jacasvript/api-server/issues"
+  },
+  "homepage": "https://github.com/leah-russo-401-advanced-jacasvript/api-server#readme",
+  "dependencies": {
+    "dotenv": "^8.2.0",
+    "json-server": "^0.16.2"
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "Categories": [
+    {
+      "id": 1,
+      "name": "name",
+      "display_name": "testname",
+      "description": "stuff here"
+    },
+    {
+      "category": "testing 2",
+      "name": "name3",
+      "display_name": "testname3",
+      "description": "stuff also goes here as well",
+      "id": 2
+    },
+    {
+      "category": "testing 2",
+      "name": "name3",
+      "display_name": "testname4",
+      "description": "stuff also goes here as well",
+      "id": 3
+    }
+  ],
+  "products": [
+    {
+      "category": "beanies",
+      "name": "ollie",
+      "display_name": "testing",
+      "description": "cool thing i made",
+      "id": 1
+    }
+  ]
+}
