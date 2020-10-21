@@ -1,11 +1,5 @@
 {
-  "Categories": [
-    {
-      "id": 1,
-      "name": "name",
-      "display_name": "testname",
-      "description": "stuff here"
-    },
+  "categories": [
     {
       "category": "testing 2",
       "name": "name3",
@@ -19,6 +13,12 @@
       "display_name": "testname4",
       "description": "stuff also goes here as well",
       "id": 3
+    },
+    {
+      "name": "testname",
+      "display_name": "testname",
+      "description": "stuff here",
+      "id": 4
     }
   ],
   "products": [
@@ -27,7 +27,7 @@
       "name": "ollie",
       "display_name": "testing",
       "description": "cool thing i made",
-      "id": 1
+      "id": 2
     }
   ]
 }
