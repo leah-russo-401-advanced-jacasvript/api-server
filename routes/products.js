@@ -2,33 +2,49 @@
 
 const express = require('express');
 const router = express.Router();
+const ProductsModel = require('../models/productsSchema.js');
+const ProductsCollections = require('../models/products.collection.js');
+let collection = new ProductsCollections(ProductsModel);
 
-router.get('/', (req,res) => {
-  res.status(200).json(products)
+router.get('/', (req,res, next) => {
+ try {
+   collection.read().then(results => {
+     res.json(results)
+   }).catch(err => next(err))
+ } catch (error) {
+  next(error);
+ }
 })
 
-router.post('/', (req,res) => {
-  req.body.id = 1;
-  products.push(req.body);
-  res.json(req.body)
+router.post('/', (req,res,next) => {
+  console.log(req.body);
+  try {
+    collection.create(req.body).then(results => {
+      res.json(results)
+    }).catch(err => next(err))
+  } catch (error) {
+   next(error);
+  }
 })
 
 router.put('/:id', (req,res) => {
-  for(let i = 0; i<products.length;i++) {
-    if(products[i].id === req.body.id) {
-      products[i] = req.body
-    }
+  try {
+    collection.update(req.body,req.params.id).then(results => {
+      res.json(results)
+    }).catch(err => next(err))
+  } catch (error) {
+   next(error);
   }
-  res.json(req.body)
 })
 
 router.delete('/:id', (req,res) => {
-  for(let i = 0; i<products.length;i++) {
-    if(products[i].id === req.body.id) {
-      products[i] = null;
-    }
+  try {
+    collection.delete(req.params.id).then(results => {
+      res.json(results)
+    }).catch(err => next(err))
+  } catch (error) {
+   next(error);
   }
-  res.json(req.body)
 })
 
 module.exports = router;
