@@ -8,10 +8,18 @@ let collection = new ProductsCollections(ProductsModel);
 
 router.get('/', (req,res, next) => {
  try {
-   collection.read().then(results => {
+   console.log('testing')
+   //console.log(collection.read())
+   collection.read()
+   .then(results => {
+     console.log (results);
      res.json(results)
-   }).catch(err => next(err))
+   })
+  .catch(err => {
+    console.log(err);
+  })
  } catch (error) {
+   console.log(error);
   next(error);
  }
 })

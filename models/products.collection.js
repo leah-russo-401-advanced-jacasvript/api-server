@@ -1,15 +1,20 @@
 'use string';
 
+//mongo.js in demo
+
 class ProductsCollection {
   constructor(model) {
-    this.model = model;
+   this.model = model;
   }
 
   read(id) {
     //get
     if(id){
       return this.model.find({_id: `${id}`})
-    } else { return this.model.find({})}
+    } 
+    else { 
+      return this.model.find({})
+    }
   }
 
   create(obj) {
