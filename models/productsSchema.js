@@ -10,4 +10,8 @@ const productsSchema = new mongoose.Schema({
 
 })
 
+//need method to authenticate use
+
+
+
 module.exports = mongoose.model('Products', productsSchema);
