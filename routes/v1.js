@@ -12,6 +12,7 @@ router.get('/:model', (req,res,next) => {
 try {
   req.params.model.read()
   .then(results => {
+    console.log(results)
     res.status(200).json(results)
   }).catch(err => {
     next(err);
